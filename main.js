@@ -6,6 +6,23 @@ let currenciesJson;
 
 const CURRENCIES_LIST = 0
 const CURRENCY_INFO = 1
+const CARDS_TO_DISPLAY = 255
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
 $(function () {
     let currenciesArray = []
@@ -41,7 +58,7 @@ $(function () {
         currenciesArray = await getApiResponse(CURRENCIES_LIST);
 
         //Run over the array of cards, and add card by card to the grid
-        for (let i = 1; i < 255; i++) {
+        for (let i = 1; i < CARDS_TO_DISPLAY; i++) {
             addCardToGrid(currenciesArray[i], i);
         }
 
@@ -68,6 +85,25 @@ $(function () {
             dataType: 'json',
         });
     }
+
+    $("#deleteCookies").click(() => {
+        function setCookie(name, value, expirydays) {
+            // var d = new Date();
+            // d.setTime(d.getTime() + (expirydays*24*60*60*1000));
+            // var expires = "expires="+ d.toUTCString();
+            document.cookie = name + "=" + value + "; ";
+        }
+
+        function deleteCookie(name){
+            console.log('deleting cookie')
+            setCookie(name,"",-1);
+        }
+
+        const cookies = document.cookie.split(";");
+        for (let i = 0; i < cookies.length; i++)
+            deleteCookie(cookies[i].split("=")[0]);
+    })
+
     $("#currenciesButton").click(() => {
         document.getElementById("aboutPage").style.display = 'none'
         document.getElementById("containerFluid").style.display = 'block'
@@ -89,7 +125,7 @@ $(function () {
 
     $(".inputSearchCoin").change(event => {
         const input = event.target.value
-
+        document.getElementById("notFound").display = 'none'
         hiddenCards.forEach(card => card.style.display = 'block')
         hiddenCards = []
         currentSearch = input
@@ -97,16 +133,23 @@ $(function () {
         const result = currenciesArray.filter(currency => !currency.id.includes(input))
         const divRow = document.getElementById("div_row")
         result.forEach(currency => {
-            const childToDelete = document.getElementById(currency.id)
+            const cardToHide = document.getElementById(currency.id)
             // childToDelete && childToDelete.style.display = 'none'
-            if (childToDelete) {
-                hiddenCards.push(childToDelete)
-                childToDelete.style.display = 'none'
+            if (cardToHide) {
+                hiddenCards.push(cardToHide)
+                cardToHide.style.display = 'none'
                 // divRow.removeChild(childToDelete)
             }
         })
-        // }
-        console.log('end')
+
+        if (hiddenCards.length === CARDS_TO_DISPLAY) {
+            console.log('true')
+            document.getElementById("notFound").style.display = 'block'
+        } else {
+            console.log(hiddenCards.length)
+            console.log(currenciesArray.length)
+            console.log(false)
+        }
         // search logic here
         // this function will be executed on click of X (clear button)
     });
@@ -133,25 +176,31 @@ $(function () {
         // console.log('currency: ', currency)
         // const buttonId = 'moreInfo' + index
         //append new card to the second row:
-        const div = document.createElement("div");
-        div.className = "col-sm-4";
+        const div = document.createElement("div")
+        div.className = "col-sm-4"
         div.id = currency.id
-        const cardDiv = document.createElement("div");
-        cardDiv.className = "card";
-        cardDiv.id = "card" + index;
-        $(div).append(cardDiv);
+
+        const cardDiv = document.createElement("div")
+        cardDiv.className = "card"
+        cardDiv.id = "card" + index
+
+        // const CardHeader = document.createElement("div")
+        // CardHeader.className="cardHeader"
+        //
+        // cardDiv.append(CardHeader)
+        $(div).append(cardDiv)
 
         // let imageSrc = ''
 
         let TextField = "<div id='textField" + index + "' class='textField'><div class='currency' id='priceUsd" + index +"'></div><div class='currency' id='priceEur" + index +"'></div><div class='currency' id='priceIls" + index +"'></div><div class='imageMoreInfoData'> <img class='img' id='img" + index + "' src=''>''</div><div id='description" + index + "'>Charging...</div></div>"
         // const DollarPrice =
-        let CardDivString = " <div id=" + currency.id + " class='symbol'>Symbol:"+ currency.symbol + "</div>";
+        let CardDivString = " <div id=" + currency.id + " class='symbol'>Symbol:"+ currency.symbol + "</div>"
         let content = 'abcd'
         CardDivString += "<div class='cardInfo'>"
         // CardDivString += "<span class='currencyName'>" + "Name:" + " " + currency.name + "</span> <label class='switch'>  <input type='checkbox'> <span class='slider round'></span> </label>";
-        CardDivString += "<span class='currencyName' id='currencyName" + index + "'>" + "Name:" + " " + currency.name + "</span>";
-        CardDivString += "<label class='switch'> <input class='sliders' type='checkbox' id='slider" + index + "'>  <span class='slider round'></span> </label>";
-        CardDivString += "<button class='btn btn-primary btn_card_more_info' type='button' id='moreInfo" + index + "'>More Info</button>";
+        CardDivString += "<span class='currencyName' id='currencyName" + index + "'>" + "Name:" + " " + currency.name + "</span>"
+        CardDivString += "<label class='switch'> <input class='sliders' type='checkbox' id='slider" + index + "'>  <span class='slider round'></span> </label>"
+        CardDivString += "<button class='btn btn-primary btn_card_more_info' type='button' id='moreInfo" + index + "'>More Info</button>"
         // CardDivString +="<div class='imageMoreInfoData'> <img id='img" + index + "' src=''>''</div>";
         // CardDivString += "<div class='currencyPrice' id='priceUsd" + index +"'>Charging...</div>";
         // CardDivString += "<div class='currencyPriceEur' id='priceEur" + index +"'></div>";
@@ -168,7 +217,7 @@ $(function () {
         $("#div_row").append(div);
 
         const openTextField = textField => {
-            const description = document.getElementById("description" + index);
+            const description = document.getElementById("description" + index)
             // console.log('click')
             // console.log(textField)
             // const card = document.getElementById("card")
@@ -181,6 +230,11 @@ $(function () {
                 document.getElementById("priceEur" + index).innerHTML = response.market_data.current_price.eur + '€'
                 document.getElementById("priceIls" + index).innerHTML = response.market_data.current_price.ils + '₪'
                 description.innerHTML = response.description['en']
+                console.log('cookie')
+                // console.log(JSON.stringify(response))
+                console.log(currency.id + "=" + JSON.stringify(response))
+                document.cookie = currency.id + "=" + JSON.stringify(response)
+                console.log(document.cookie)
                 // console.log(response.image.large)
             })}
 
@@ -190,12 +244,23 @@ $(function () {
         }
 
         $('#moreInfo' + index).click(function() {
-            const textField = document.getElementById("textField" + index);
-            if (textField.style.display !== 'flex') {
-                openTextField(textField)
+            const cookie = document.cookie
+            if (cookie === '') {
+                console.log(true)
+                const textField = document.getElementById("textField" + index);
+                if (textField.style.display !== 'flex') {
+                    openTextField(textField)
+                } else {
+                    closeTextField(textField)
+                }
             } else {
-                closeTextField(textField)
+                console.log('else')
+                const stam = getCookie('0-5x-long-altcoin-index-token')
+                console.log(stam)
+                // document.cookie = "username=John Doe";
             }
+
+            // document.cookie = "username=John Doe"
         })
 
             // clickedButton.style.height = "400px"

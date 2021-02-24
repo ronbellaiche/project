@@ -306,3 +306,17 @@ input:checked + .slider:before {
 #crossIcon:hover {
   color: red;
 }
+
+#notFound {
+  display: none;
+  margin-top: 24px;
+}
+
+#notFoundContainer {
+  align-items: center;
+  color: wheat;
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+}
+

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f6d0015-b98c-408e-8f2b-ff622098c44d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
@@ -75,6 +74,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="560" y="173" key="#HTML" timestamp="1614190497174">
+      <screen x="0" y="23" width="1920" height="975" />
+    </state>
+    <state x="560" y="173" key="#HTML/-1440.-54.1440.900/0.23.1920.975@0.23.1920.975" timestamp="1614190497174" />
     <state width="1265" height="93" key="GridCell.Tab.0.bottom" timestamp="1613675122029">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
@@ -99,15 +102,16 @@
     <state width="1265" height="93" key="GridCell.Tab.0.right/-1440.-54.1440.900/0.23.1920.973@0.23.1920.973" timestamp="1613675122028" />
     <state width="1899" height="149" key="GridCell.Tab.0.right/-1440.-54.1440.900/0.23.1920.975@0.23.1920.975" timestamp="1613569310582" />
     <state width="1899" height="156" key="GridCell.Tab.0.right/-1440.-54.1440.900/0.23.1920.982@0.23.1920.982" timestamp="1613576164439" />
-    <state x="681" y="129" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1613932971298">
-      <screen x="0" y="23" width="1920" height="969" />
+    <state x="681" y="129" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1614189243134">
+      <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state x="681" y="129" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1440.-54.1440.900/0.23.1920.969@0.23.1920.969" timestamp="1613932971298" />
-    <state x="640" y="263" width="639" height="489" key="find.popup" timestamp="1614182818263">
+    <state x="681" y="129" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1440.-54.1440.900/0.23.1920.973@0.23.1920.973" timestamp="1614189243134" />
+    <state x="640" y="263" width="639" height="489" key="find.popup" timestamp="1614189425034">
       <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state x="640" y="262" width="639" height="486" key="find.popup/-1440.-54.1440.900/0.23.1920.969@0.23.1920.969" timestamp="1614103736540" />
-    <state x="640" y="263" width="639" height="489" key="find.popup/-1440.-54.1440.900/0.23.1920.973@0.23.1920.973" timestamp="1614182818263" />
+    <state x="640" y="263" width="639" height="489" key="find.popup/-1440.-54.1440.900/0.23.1920.973@0.23.1920.973" timestamp="1614189425034" />
     <state x="640" y="264" width="639" height="492" key="find.popup/-1440.-54.1440.900/0.23.1920.978@0.23.1920.978" timestamp="1614018004012" />
     <state x="640" y="267" width="639" height="486" key="find.popup/-1440.-54.1440.900/0.23.1920.988@0.23.1920.988" timestamp="1613671399957" />
     <state x="625" y="234" key="run.anything.popup" timestamp="1613934610187">
@@ -125,7 +129,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/main.js</url>
-          <line>275</line>
+          <line>337</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
