@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0f6d0015-b98c-408e-8f2b-ff622098c44d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1obvz67Bb4VHRgbxAcgGCFYOqjm" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/assets/images" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index (1).html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled3/index (1).html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled3/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/main.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index (1).html" />
+        <item itemvalue="Node.js.main.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0f6d0015-b98c-408e-8f2b-ff622098c44d" name="Default Changelist" comment="" />
+      <created>1613568364029</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613568364029</updated>
+      <workItem from="1613568365548" duration="20540000" />
+      <workItem from="1613929290898" duration="14993000" />
+      <workItem from="1614078362606" duration="10571000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1265" height="93" key="GridCell.Tab.0.bottom" timestamp="1613675122029">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state width="1265" height="93" key="GridCell.Tab.0.bottom/-1440.-54.1440.900/0.23.1920.973@0.23.1920.973" timestamp="1613675122029" />
+    <state width="1899" height="149" key="GridCell.Tab.0.bottom/-1440.-54.1440.900/0.23.1920.975@0.23.1920.975" timestamp="1613569310582" />
+    <state width="1899" height="156" key="GridCell.Tab.0.bottom/-1440.-54.1440.900/0.23.1920.982@0.23.1920.982" timestamp="1613576164440" />
+    <state width="1265" height="93" key="GridCell.Tab.0.center" timestamp="1613675122028">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state width="1265" height="93" key="GridCell.Tab.0.center/-1440.-54.1440.900/0.23.1920.973@0.23.1920.973" timestamp="1613675122028" />
+    <state width="1899" height="149" key="GridCell.Tab.0.center/-1440.-54.1440.900/0.23.1920.975@0.23.1920.975" timestamp="1613569310581" />
+    <state width="1899" height="156" key="GridCell.Tab.0.center/-1440.-54.1440.900/0.23.1920.982@0.23.1920.982" timestamp="1613576164438" />
+    <state width="1265" height="93" key="GridCell.Tab.0.left" timestamp="1613675122028">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state width="1265" height="93" key="GridCell.Tab.0.left/-1440.-54.1440.900/0.23.1920.973@0.23.1920.973" timestamp="1613675122028" />
+    <state width="1899" height="149" key="GridCell.Tab.0.left/-1440.-54.1440.900/0.23.1920.975@0.23.1920.975" timestamp="1613569310581" />
+    <state width="1899" height="156" key="GridCell.Tab.0.left/-1440.-54.1440.900/0.23.1920.982@0.23.1920.982" timestamp="1613576164437" />
+    <state width="1265" height="93" key="GridCell.Tab.0.right" timestamp="1613675122028">
+      <screen x="0" y="23" width="1920" height="973" />
+    </state>
+    <state width="1265" height="93" key="GridCell.Tab.0.right/-1440.-54.1440.900/0.23.1920.973@0.23.1920.973" timestamp="1613675122028" />
+    <state width="1899" height="149" key="GridCell.Tab.0.right/-1440.-54.1440.900/0.23.1920.975@0.23.1920.975" timestamp="1613569310582" />
+    <state width="1899" height="156" key="GridCell.Tab.0.right/-1440.-54.1440.900/0.23.1920.982@0.23.1920.982" timestamp="1613576164439" />
+    <state x="681" y="129" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1613932971298">
+      <screen x="0" y="23" width="1920" height="969" />
+    </state>
+    <state x="681" y="129" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1440.-54.1440.900/0.23.1920.969@0.23.1920.969" timestamp="1613932971298" />
+    <state x="640" y="262" width="639" height="486" key="find.popup" timestamp="1614103736540">
+      <screen x="0" y="23" width="1920" height="969" />
+    </state>
+    <state x="640" y="262" width="639" height="486" key="find.popup/-1440.-54.1440.900/0.23.1920.969@0.23.1920.969" timestamp="1614103736540" />
+    <state x="640" y="263" width="639" height="489" key="find.popup/-1440.-54.1440.900/0.23.1920.973@0.23.1920.973" timestamp="1614010265292" />
+    <state x="640" y="264" width="639" height="492" key="find.popup/-1440.-54.1440.900/0.23.1920.978@0.23.1920.978" timestamp="1614018004012" />
+    <state x="640" y="267" width="639" height="486" key="find.popup/-1440.-54.1440.900/0.23.1920.988@0.23.1920.988" timestamp="1613671399957" />
+    <state x="625" y="234" key="run.anything.popup" timestamp="1613934610187">
+      <screen x="0" y="23" width="1920" height="969" />
+    </state>
+    <state x="625" y="234" key="run.anything.popup/-1440.-54.1440.900/0.23.1920.969@0.23.1920.969" timestamp="1613934610187" />
+    <state x="942" y="239" width="670" height="668" key="search.everywhere.popup" timestamp="1614012584304">
+      <screen x="0" y="23" width="1920" height="975" />
+    </state>
+    <state x="942" y="239" width="670" height="668" key="search.everywhere.popup/-1440.-54.1440.900/0.23.1920.975@0.23.1920.975" timestamp="1614012584304" />
+    <state x="942" y="242" width="670" height="676" key="search.everywhere.popup/-1440.-54.1440.900/0.23.1920.988@0.23.1920.988" timestamp="1613669683294" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/main.js</url>
+          <line>271</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

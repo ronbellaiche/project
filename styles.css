@@ -1,0 +1,289 @@
+/* main css to site: */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* design to body of site: */
+body{
+  height: 100%;
+}
+
+/* title of site inside nav: */
+h1 {
+  font-size: 55px;
+  margin: auto;
+  color: blue;
+}
+
+#wrapper {
+  overflow: hidden;
+}
+
+/* nav of h1: */
+.navbar-text {
+  background-color: rgb(211, 211, 211);
+  padding: 25px;
+  text-align: left;
+  border-bottom: 3px solid blue;
+  width: 100%;
+  height: 125px;
+  margin: 0;
+  padding-left: 10px;
+}
+
+/* 3 links of navigate in site: */
+.divHeader {
+  font-size: 17px;
+  font-weight: bold;
+  display: inline;
+  margin-left: 20px;
+  color: white;
+}
+
+/* input search+ button fot searching currency: */
+.searchCoin {
+  display: inline;
+  margin-left: 36px;
+  color: #2196F3;
+  font-size: medium;
+  font-weight: bold;
+}
+
+/* design to input of search coin+ button of search coin: */
+.inputSearchCoin, .buttonSearchCoin {
+  border: 3px solid blue;
+  margin-top: 20px;
+}
+
+/* Create a space between input of search coin and button of search coin:  */
+.buttonSearchCoin {
+  margin-left: 4px;
+}
+
+/* design  to cards with currency information */
+.card {
+  border: 2px solid blue;
+  height: 160px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: rgb(192, 237, 255);
+  margin-left: 10px;
+}
+
+/* The switch - the box around the slider: */
+.switch {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 34px;
+  right: 7px;
+  top: 6px;
+}
+
+/* Hide default HTML checkbox: */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider: */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* continue to design of slider: */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/*  continue to design of slider: */
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+/*  continue to design of slider: */
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+/*  continue to design of slider: */
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders: */
+.slider.round {
+  border-radius: 34px;
+}
+
+/* continue to Rounded sliders: */
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* button of "More Info": */
+.btn_card_more_info {
+  font-size: 16px;
+  padding-top: 6px;
+  margin-left: 13px;
+  margin-top: 29px;
+}
+
+/* button of "Load Currencies": */
+#buttonLoadCurrencies {
+  margin-top: 5px;
+}
+
+/* button of "Add Cards": */
+#buttonCreateCard {
+  margin-left: 20px;
+}
+
+/* rows of cards: */
+.row {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* background-image with coins: */
+.backgroundImageOfCoins {
+  background-image: url("assets/images/backgroundImage.jpg");
+  width: 100%;
+  background-attachment: fixed;
+  position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* symbol of currency: */
+.symbol {
+  padding-left: 10px;
+  padding-top: 6px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  color: blue;
+  font-weight: bold;
+}
+
+/* design of coin's name: */
+.currencyName {
+  text-align: left;
+  padding-left: 10px;
+  margin-top: 5px;
+  float: left;
+  color: blue;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* ... */
+.cardInfo {
+  text-align: left;
+}
+
+/* design for progress bar when the page loads: */
+#loadingBar {
+  display: none;
+  width: 90px;
+  height: 80px;
+  margin-left: 30%;
+}
+
+/* design to collapser of button "More Info": */
+.textField {
+  padding-inline-start: 7px;
+  display: none;
+  overflow-y: auto;
+  flex-direction: column;
+  margin-block-start: 14px;
+  background-color: white;
+  border: 1px solid black;
+  height: 230px;
+  margin-left: 16px;
+  margin-top: 12px;
+  width: 240px;
+}
+
+/* design to image in More Info onclick: */
+.imageMoreInfoData {
+  height: 30px;
+  width: 30px;
+}
+
+/* image of each currency when you click on "More Info" card: */
+.img {
+  position: relative;
+  bottom: 68px;
+  left: 180px;
+}
+.currency {
+  font-size: 18px;
+}
+
+.modal {
+  display: none;
+  background-color: white;
+  /* margin-left: 1000px; */
+  border: 1px solid black;
+  height: 500px;
+  margin: auto;
+  position: absolute;
+  width: 500px;
+}
+
+
+.modalContainer {
+  display: flex;
+  height : 700px;
+}
+
+
+.modalWarning {
+  font-size: 24px;
+}
+
+
+.modalQuestion {
+  font-size: 16px;
+}
+
+
+.currencyToDelete {
+  padding-left: 40px;
+  margin-top: 60px;
+}
+
+#crossIcon {
+  position: absolute;
+  right: 0px;
+  margin-right: 14px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+#crossIcon:hover {
+  color: red;
+}
