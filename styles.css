@@ -50,6 +50,12 @@ h1 {
   font-weight: bold;
 }
 
+#aboutPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* design to input of search coin+ button of search coin: */
 .inputSearchCoin, .buttonSearchCoin {
   border: 3px solid blue;
@@ -225,6 +231,19 @@ input:checked + .slider:before {
   margin-left: 16px;
   margin-top: 12px;
   width: 240px;
+}
+
+#aboutTextField {
+  padding-inline-start: 7px;
+  display: none;
+  flex-direction: column;
+  margin-block-start: 14px;
+  background-color: white;
+  border: 1px solid black;
+  height: 800px;
+  margin-left: 16px;
+  margin-top: 40px;
+  width: 90%;
 }
 
 /* design to image in More Info onclick: */

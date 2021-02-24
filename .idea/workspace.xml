@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f6d0015-b98c-408e-8f2b-ff622098c44d" name="Default Changelist" comment="" />
+    <list default="true" id="0f6d0015-b98c-408e-8f2b-ff622098c44d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1obvz67Bb4VHRgbxAcgGCFYOqjm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -16,6 +26,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
@@ -56,6 +67,7 @@
       <workItem from="1613568365548" duration="20540000" />
       <workItem from="1613929290898" duration="14993000" />
       <workItem from="1614078362606" duration="10571000" />
+      <workItem from="1614180687993" duration="3146000" />
     </task>
     <servers />
   </component>
@@ -91,11 +103,11 @@
       <screen x="0" y="23" width="1920" height="969" />
     </state>
     <state x="681" y="129" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1440.-54.1440.900/0.23.1920.969@0.23.1920.969" timestamp="1613932971298" />
-    <state x="640" y="262" width="639" height="486" key="find.popup" timestamp="1614103736540">
-      <screen x="0" y="23" width="1920" height="969" />
+    <state x="640" y="263" width="639" height="489" key="find.popup" timestamp="1614182818263">
+      <screen x="0" y="23" width="1920" height="973" />
     </state>
     <state x="640" y="262" width="639" height="486" key="find.popup/-1440.-54.1440.900/0.23.1920.969@0.23.1920.969" timestamp="1614103736540" />
-    <state x="640" y="263" width="639" height="489" key="find.popup/-1440.-54.1440.900/0.23.1920.973@0.23.1920.973" timestamp="1614010265292" />
+    <state x="640" y="263" width="639" height="489" key="find.popup/-1440.-54.1440.900/0.23.1920.973@0.23.1920.973" timestamp="1614182818263" />
     <state x="640" y="264" width="639" height="492" key="find.popup/-1440.-54.1440.900/0.23.1920.978@0.23.1920.978" timestamp="1614018004012" />
     <state x="640" y="267" width="639" height="486" key="find.popup/-1440.-54.1440.900/0.23.1920.988@0.23.1920.988" timestamp="1613671399957" />
     <state x="625" y="234" key="run.anything.popup" timestamp="1613934610187">
@@ -113,8 +125,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/main.js</url>
-          <line>271</line>
-          <properties lambdaOrdinal="-1" />
+          <line>275</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

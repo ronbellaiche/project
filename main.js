@@ -68,40 +68,44 @@ $(function () {
             dataType: 'json',
         });
     }
+    $("#currenciesButton").click(() => {
+        document.getElementById("aboutPage").style.display = 'none'
+        document.getElementById("containerFluid").style.display = 'block'
+    })
+
+    $("#about").click(() => {
+        document.getElementById("containerFluid").style.display = 'none'
+        document.getElementById("aboutPage").style.display = 'flex'
+        const AboutTextField = document.getElementById("aboutTextField")
+        AboutTextField.style.display = 'flex'
+
+        // let TextWrapper = document.createElement("div")
+        // TextWrapper.className = 'textField'
+        // TextWrapper += "Hi Hello"
+        // TextWrapper += "</div>"
+        // document.getElementById("aboutPage").append(TextWrapper)
+
+    })
 
     $(".inputSearchCoin").change(event => {
         const input = event.target.value
-        if (input === '') {
-            hiddenCards.forEach(card => card.style.display = 'block')
-            hiddenCards = []
-        }
-        // else if (hiddenCards) {
-            // currentSearch = input
-            // const result = currenciesArray.filter(currency => !currency.id.includes(input)).concat(hiddenCards)
-            // const divRow = document.getElementById("div_row")
-            // result.forEach(currency => {
-            //     const childToDelete = document.getElementById(currency.id)
-            //     // childToDelete && childToDelete.style.display = 'none'
-            //     if (childToDelete) {
-            //         hiddenCards.push(childToDelete)
-            //         childToDelete.style.display = 'none'
-            //         // divRow.removeChild(childToDelete)
-            //     }
-            // })}
-        else {
-            currentSearch = input
-            const result = currenciesArray.filter(currency => !currency.id.includes(input))
-            const divRow = document.getElementById("div_row")
-            result.forEach(currency => {
-                const childToDelete = document.getElementById(currency.id)
-                // childToDelete && childToDelete.style.display = 'none'
-                if (childToDelete) {
-                    hiddenCards.push(childToDelete)
-                    childToDelete.style.display = 'none'
-                    // divRow.removeChild(childToDelete)
-                }
-            })
-        }
+
+        hiddenCards.forEach(card => card.style.display = 'block')
+        hiddenCards = []
+        currentSearch = input
+
+        const result = currenciesArray.filter(currency => !currency.id.includes(input))
+        const divRow = document.getElementById("div_row")
+        result.forEach(currency => {
+            const childToDelete = document.getElementById(currency.id)
+            // childToDelete && childToDelete.style.display = 'none'
+            if (childToDelete) {
+                hiddenCards.push(childToDelete)
+                childToDelete.style.display = 'none'
+                // divRow.removeChild(childToDelete)
+            }
+        })
+        // }
         console.log('end')
         // search logic here
         // this function will be executed on click of X (clear button)
