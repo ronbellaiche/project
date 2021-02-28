@@ -6,6 +6,8 @@ let currenciesJson;
 
 const CURRENCIES_LIST = 0
 const CURRENCY_INFO = 1
+const CARDS_TO_DISPLAY  = 255
+const CARDS_TO_IGNORE  = 1
 
 $(function () {
     let currenciesArray = []
@@ -13,20 +15,6 @@ $(function () {
     let isModalOpen = false
     let currentSearch = ''
     let hiddenCards = []
-    // run on page load:
-    // async function loadSomething() {
-
-    //     const result = await getApiResponse("https://api.coingecko.com/api/v3/list"); //result can be json or array of objects
-    //     //const result=  await getApiResult("https://api.coingecko.com/api/v3/coins/list","");
-    //
-    //     console.log(result);
-    //     //do something with the result (for example, print the result on the screen)
-    //
-    // }
-    //
-    // loadSomething();
-
-    // return;
 
     // Activating the function of LoadCurrencies:
     LoadCurrencies();
@@ -41,7 +29,7 @@ $(function () {
         currenciesArray = await getApiResponse(CURRENCIES_LIST);
 
         //Run over the array of cards, and add card by card to the grid
-        for (let i = 1; i < 255; i++) {
+        for (let i = CARDS_TO_IGNORE; i < CARDS_TO_DISPLAY; i++) {
             addCardToGrid(currenciesArray[i], i);
         }
 
@@ -89,50 +77,28 @@ $(function () {
 
     $(".inputSearchCoin").change(event => {
         const input = event.target.value
-
+        const NotFound = document.getElementById("notFound")
+        NotFound.style.display = 'none'
         hiddenCards.forEach(card => card.style.display = 'block')
         hiddenCards = []
         currentSearch = input
 
         const result = currenciesArray.filter(currency => !currency.id.includes(input))
-        const divRow = document.getElementById("div_row")
         result.forEach(currency => {
-            const childToDelete = document.getElementById(currency.id)
-            // childToDelete && childToDelete.style.display = 'none'
-            if (childToDelete) {
-                hiddenCards.push(childToDelete)
-                childToDelete.style.display = 'none'
-                // divRow.removeChild(childToDelete)
+            const cardToHide = document.getElementById(currency.id)
+            if (cardToHide) {
+                hiddenCards.push(cardToHide)
+                cardToHide.style.display = 'none'
             }
         })
-        // }
-        console.log('end')
-        // search logic here
-        // this function will be executed on click of X (clear button)
+
+        if (hiddenCards.length === CARDS_TO_DISPLAY - CARDS_TO_IGNORE) {
+            NotFound.style.display = 'block'
+        }
     });
-    //     // try+ catch to checking if the search success or failed by user:
-    //     try {
-    //         $("#mainDiv").empty();
-    //         const nameOfCurrency = $(".inputSearchCoin").val();
-    //         const urlSearchCurrency = "https://api.coingecko.com/api/v3/coins/list${nameOfCurrency}";
-    //
-    //         const dataCurrency = await showCurrency(urlSearchCurrency);
-    //         getArrayOfCurrencies(dataCurrency);
-    //     }
-    //     catch (err) {
-    //         alert("The currency you search doesn't find");
-    //     }
-    // });
 
     // function to dynamic appearance of the cards with the information on the currencies:
     function addCardToGrid(currency = {}, index) {
-        // console.log('currency.id: ', currency.id)
-        // if (!currency.id.includes('01coin')) {
-        //     return
-        // }
-        // console.log('currency: ', currency)
-        // const buttonId = 'moreInfo' + index
-        //append new card to the second row:
         const div = document.createElement("div");
         div.className = "col-sm-4";
         div.id = currency.id
@@ -172,9 +138,6 @@ $(function () {
 
         const openTextField = textField => {
             const description = document.getElementById("description" + index);
-            // console.log('click')
-            // console.log(textField)
-            // const card = document.getElementById("card")
             cardDiv.style.height = "400px"
             textField.style.display = "flex"
             getApiResponse(CURRENCY_INFO, currency.id).then(response => {
@@ -184,7 +147,6 @@ $(function () {
                 document.getElementById("priceEur" + index).innerHTML = response.market_data.current_price.eur + '€'
                 document.getElementById("priceIls" + index).innerHTML = response.market_data.current_price.ils + '₪'
                 description.innerHTML = response.description['en']
-                // console.log(response.image.large)
             })}
 
         const closeTextField = textField => {

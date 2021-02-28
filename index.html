@@ -15,87 +15,87 @@
 <!--  picture to site with background fixed of coins:  -->
 
 <body class="backgroundImageOfCoins">
+    <div>
 
-
-<!-- main top: -->
-<div>
-
-    <!-- Display a title for the site: -->
-    <div class="navbar-text">
-        <h1> Cryptonite
-            <!-- Displays the progress bar when the screen of the page loads: -->
-            <img id="loadingBar" src="assets/images/baring.jpg">
-        </h1>
-    </div>
-</div>
-
-<br>
-<!-- displays 3 links to navigate: -->
-<a href="#" class="divHeader btn btn-primary" id="currenciesButton"> Currencies </a>
-<a href="#" class="divHeader btn btn-primary"> Reports </a>
-<a href="#" class="divHeader btn btn-primary" id="about"> About </a>
-
-<!--displays Input box for searching for a currency +
-             button for searching currency: -->
-<div class="searchCoin">
-    <input class="inputSearchCoin" type="text" placeholder="Search coin" name="search">
-    <button class="buttonSearchCoin" type="submit"><i>Search</i></button>
-</div>
-
-<!-- button More Info show data onclick: -->
-<!-- <button class="btn_card_more_info">More Info</button>
-<div class="collapse" id="collapseExample">
-    <div class="card card-block">
-        ff
-    </div>
-</div> -->
-
-<!-- displays cards with data of coins: -->
-<div id="aboutPage">
-    <div class="textField" id="aboutTextField">
-        <div id="personalInformation">
-            <p id="hello"> hello! </p>
-            <p class="detailsAbout"> my name is miri gotliv,</p>
-            <p class="detailsAbout"> I'm 21 years old</p>
-            <p class="detailsAbout"> and I live in Petah Tiqwa.</p>
-        </div>
-        <div>
-            <p class="projectDescription">In this app you can search for currencies
-                and get information about them,
-            </p>
-            <p class="projectDescription">for example to see how much they are worth
-                in euros in dollars and shekels.</p>
-        </div>
-        <div>
-            <img id="myPicture" src="assets/images/mypicture.jpg">
+        <!-- Display a title for the site: -->
+        <div class="navbar-text">
+            <h1> Cryptonite
+                <!-- Displays the progress bar when the screen of the page loads: -->
+                <img id="loadingBar" src="assets/images/baring.jpg">
+            </h1>
         </div>
     </div>
-</div>
-<div class="container-fluid" id="containerFluid">
 
-    <!-- second row: -->
-    <div id="div_row" class="row">
+    <br>
+    <!-- displays 3 links to navigate: -->
+    <a href="#" class="divHeader btn btn-primary" id="currenciesButton"> Currencies </a>
+    <a href="#" class="divHeader btn btn-primary"> Reports </a>
+    <a href="#" class="divHeader btn btn-primary" id="about"> About </a>
+
+    <!--displays Input box for searching for a currency +
+                 button for searching currency: -->
+    <div class="searchCoin">
+        <input class="inputSearchCoin" type="text" placeholder="Search coin" name="search">
+        <button class="buttonSearchCoin" type="submit"><i>Search</i></button>
     </div>
-    <!-- closing a div of background fixed of coins: -->
-</div>
-<div class="modalContainer">
-    <div class="modal" id="modal">
-        <div class="modalMessage">
-            <div class="glyphicon glyphicon-remove" id="crossIcon"></div>
-            <div class="modalWarning">
-                You cannot select more than 5 currencies.
+
+    <!-- button More Info show data onclick: -->
+    <!-- <button class="btn_card_more_info">More Info</button>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-block">
+            ff
+        </div>
+    </div> -->
+
+    <!-- displays cards with data of coins: -->
+    <div id="aboutPage">
+        <div class="textField" id="aboutTextField">
+            <div id="personalInformation">
+                <p id="hello"> hello! </p>
+                <p class="detailsAbout"> my name is miri gotliv,</p>
+                <p class="detailsAbout"> I'm 21 years old</p>
+                <p class="detailsAbout"> and I live in Petah Tiqwa.</p>
             </div>
-            <div class="modalQuestion">
-                Do you want to cancel or delete one of the below currencies:
-                <div class="modalCurrency">currency</div>
+            <div>
+                <p class="projectDescription">In this app you can search for currencies
+                    and get information about them,
+                </p>
+                <p class="projectDescription">for example to see how much they are worth
+                    in euros in dollars and shekels.</p>
             </div>
-            <button id="cancelButton">Cancel</button>
-            <div class="currencyToDelete" id="currencyToDelete"/>
+            <div>
+                <img id="myPicture" src="assets/images/mypicture.jpg">
+            </div>
         </div>
     </div>
-</div>
+    <div class="container-fluid" id="containerFluid">
 
+        <!-- second row: -->
+        <div id="div_row" class="row">
+        </div>
+        <!-- closing a div of background fixed of coins: -->
+    </div>
 
+    <div id="notFoundContainer">
+        <div id="notFound">Couldn't find any cryptocurrency</div>
+    </div>
+
+    <div class="modalContainer">
+        <div class="modal" id="modal">
+            <div class="modalMessage">
+                <div class="glyphicon glyphicon-remove" id="crossIcon"></div>
+                <div class="modalWarning">
+                    You cannot select more than 5 currencies.
+                </div>
+                <div class="modalQuestion">
+                    Do you want to cancel or delete one of the below currencies:
+                    <div class="modalCurrency">currency</div>
+                </div>
+                <button id="cancelButton">Cancel</button>
+                <div class="currencyToDelete" id="currencyToDelete"/>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
