@@ -306,3 +306,34 @@ input:checked + .slider:before {
 #crossIcon:hover {
   color: red;
 }
+
+#hello {
+  margin-top: 13px;
+  margin-left: 10%;
+  font-size: xx-large;
+  color: blue;
+  font-weight: bold;
+}
+
+.detailsAbout {
+  padding-left: 12%;
+  font-size: large;
+  color: rgb(0, 89, 255);
+  font-weight: bold;
+
+}
+
+.projectDescription {
+  padding-left: 13%;
+  padding-top: 5px;
+  font-size: 17px;
+  font-weight: bold;
+  color: rgb(0, 183, 255);
+}
+
+#myPicture{
+  height: 200px;
+  width: 180px;
+  margin-left: 20%;
+}
+
