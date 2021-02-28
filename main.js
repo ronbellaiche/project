@@ -118,7 +118,7 @@ $(function () {
 
         // let imageSrc = ''
 
-        let TextField = "<div id='textField" + index + "' class='textField'><div class='currency' id='priceUsd" + index +"'></div><div class='currency' id='priceEur" + index +"'></div><div class='currency' id='priceIls" + index +"'></div><div class='imageMoreInfoData'> <img class='img' id='img" + index + "' src=''>''</div><div id='description" + index + "'>Charging...</div></div>"
+        let TextField = "<div id='textFieldContainer'><div id='textField" + index + "' class='textField'><div class='currency' id='priceUsd" + index +"'></div><div class='currency' id='priceEur" + index +"'></div><div class='currency' id='priceIls" + index +"'></div><div class='imageMoreInfoData'> <img class='img' id='img" + index + "' src=''>''</div><div id='description" + index + "'>Charging...</div></div></div>"
         // const DollarPrice =
         let CardDivString = " <div id=" + currency.id + " class='symbol'>Symbol:"+ currency.symbol + "</div>";
         let content = 'abcd'
@@ -131,7 +131,7 @@ $(function () {
         // CardDivString += "<div class='currencyPrice' id='priceUsd" + index +"'>Charging...</div>";
         // CardDivString += "<div class='currencyPriceEur' id='priceEur" + index +"'></div>";
         // CardDivString += "<div class='currencyPriceILS' id='priceIls" + index +"'></div>";
-        CardDivString += TextField
+        // CardDivString += TextField
         // CardDivString += Modal
 
 
@@ -142,6 +142,7 @@ $(function () {
         $(cardDiv).append(CardDivString);
         let MoreInfoButton = "<div id='moreInfoContainer'><button class='btn btn-primary btn_card_more_info' type='button' id='moreInfo" + index + "'>More Info</button><div/>";
         $(cardDiv).append(MoreInfoButton);
+        $(cardDiv).append(TextField);
 
         $("#div_row").append(div);
 
