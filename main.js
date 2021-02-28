@@ -151,7 +151,7 @@ $(function () {
         // CardDivString += "<span class='currencyName'>" + "Name:" + " " + currency.name + "</span> <label class='switch'>  <input type='checkbox'> <span class='slider round'></span> </label>";
         CardDivString += "<span class='currencyName' id='currencyName" + index + "'>" + "Name:" + " " + currency.name + "</span>";
         CardDivString += "<label class='switch'> <input class='sliders' type='checkbox' id='slider" + index + "'>  <span class='slider round'></span> </label>";
-        CardDivString += "<button class='btn btn-primary btn_card_more_info' type='button' id='moreInfo" + index + "'>More Info</button>";
+        // CardDivString += "<button class='btn btn-primary btn_card_more_info' type='button' id='moreInfo" + index + "'>More Info</button>";
         // CardDivString +="<div class='imageMoreInfoData'> <img id='img" + index + "' src=''>''</div>";
         // CardDivString += "<div class='currencyPrice' id='priceUsd" + index +"'>Charging...</div>";
         // CardDivString += "<div class='currencyPriceEur' id='priceEur" + index +"'></div>";
@@ -165,6 +165,9 @@ $(function () {
 
         // append switch to card:
         $(cardDiv).append(CardDivString);
+        let MoreInfoButton = "<div id='moreInfoContainer'><button class='btn btn-primary btn_card_more_info' type='button' id='moreInfo" + index + "'>More Info</button><div/>";
+        $(cardDiv).append(MoreInfoButton);
+
         $("#div_row").append(div);
 
         const openTextField = textField => {
@@ -232,7 +235,7 @@ $(function () {
         }
 
         const addCurrency = (currentIndex = index) => {
-            if (selectedCurrencies.length < 1)
+            if (selectedCurrencies.length < 5)
             {
                 selectedCurrencies.push(index)
             } else {

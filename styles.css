@@ -69,13 +69,15 @@ h1 {
 
 /* design  to cards with currency information */
 .card {
-  border: 2px solid blue;
-  height: 160px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  position: relative;
   background-color: rgb(192, 237, 255);
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  margin-bottom: 10px;
   margin-left: 10px;
+  margin-top: 20px;
+  position: relative;
 }
 
 /* The switch - the box around the slider: */
@@ -151,11 +153,14 @@ input:checked + .slider:before {
 /* button of "More Info": */
 .btn_card_more_info {
   font-size: 16px;
-  padding-top: 6px;
-  margin-left: 13px;
-  margin-top: 29px;
 }
 
+#moreInfoContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 /* button of "Load Currencies": */
 #buttonLoadCurrencies {
   margin-top: 5px;
@@ -208,6 +213,7 @@ input:checked + .slider:before {
 /* ... */
 .cardInfo {
   text-align: left;
+  height: 52px;
 }
 
 /* design for progress bar when the page loads: */
