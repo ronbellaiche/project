@@ -75,9 +75,18 @@ $(function () {
 
     })
 
-    $(".inputSearchCoin").change(event => {
+    $(".inputSearchCoin").keyup( event => {
         const input = event.target.value
         const NotFound = document.getElementById("notFound")
+        const SearchButton = document.getElementById("searchButton")
+        if (input.length > 0) {
+          SearchButton.style.cursor = 'pointer'
+          SearchButton.style.opacity = '1'
+        } else {
+            SearchButton.style.cursor = 'not-allowed'
+            SearchButton.style.opacity = '0.7'
+        }
+
         NotFound.style.display = 'none'
         hiddenCards.forEach(card => card.style.display = 'block')
         hiddenCards = []
